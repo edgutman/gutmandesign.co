@@ -1,0 +1,21 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light pink background -->
+  <rect width="800" height="500" fill="#fce7f3"/>
+  
+  <!-- Placeholder content -->
+  <rect x="100" y="100" width="600" height="300" rx="12" fill="#fbcfe8" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Notification mockup -->
+  <rect x="150" y="150" width="500" height="80" rx="8" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <circle cx="180" cy="190" r="15" fill="#ec4899"/>
+  <rect x="210" y="175" width="200" height="8" rx="4" fill="#f3e8ff"/>
+  <rect x="210" y="195" width="150" height="6" rx="3" fill="#fce7f3"/>
+  
+  <rect x="150" y="250" width="500" height="80" rx="8" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <circle cx="180" cy="290" r="15" fill="#ec4899"/>
+  <rect x="210" y="275" width="180" height="8" rx="4" fill="#f3e8ff"/>
+  <rect x="210" y="295" width="120" height="6" rx="3" fill="#fce7f3"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="20" font-weight="600">Affirm Notification Center</text>
+</svg>

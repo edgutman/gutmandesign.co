@@ -1,0 +1,21 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#fce7f3"/>
+  
+  <!-- Help interface -->
+  <rect x="100" y="80" width="400" height="240" rx="12" fill="#fbcfe8" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Search -->
+  <rect x="130" y="110" width="340" height="30" rx="15" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <circle cx="450" cy="125" r="8" fill="#ec4899"/>
+  
+  <!-- FAQ items -->
+  <rect x="130" y="160" width="340" height="40" rx="6" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="140" y="170" width="200" height="6" rx="3" fill="#ec4899"/>
+  <rect x="140" y="185" width="150" height="4" rx="2" fill="#f3e8ff"/>
+  
+  <rect x="130" y="220" width="340" height="40" rx="6" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="140" y="230" width="180" height="6" rx="3" fill="#ec4899"/>
+  <rect x="140" y="245" width="120" height="4" rx="2" fill="#f3e8ff"/>
+  
+  <text x="300" y="380" text-anchor="middle" fill="#be185d" font-family="system-ui, sans-serif" font-size="12">31% CSAT Increase</text>
+</svg>

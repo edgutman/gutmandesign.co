@@ -1,0 +1,20 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#fce7f3"/>
+  
+  <!-- Virtual card mockup -->
+  <rect x="200" y="150" width="400" height="200" rx="20" fill="#fbcfe8" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Card details -->
+  <rect x="240" y="190" width="320" height="120" rx="12" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="260" y="210" width="80" height="12" rx="6" fill="#ec4899"/>
+  <text x="260" y="240" fill="#be185d" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Virtual Card</text>
+  
+  <rect x="260" y="260" width="120" height="8" rx="4" fill="#f3e8ff"/>
+  <rect x="260" y="280" width="100" height="6" rx="3" fill="#fce7f3"/>
+  
+  <!-- Generate button -->
+  <rect x="450" y="270" width="80" height="25" rx="6" fill="#ec4899"/>
+  <text x="490" y="287" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Generate</text>
+  
+  <text x="400" y="60" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="20" font-weight="600">Affirm Virtual Card</text>
+</svg>

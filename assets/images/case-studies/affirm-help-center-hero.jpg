@@ -1,0 +1,30 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#fce7f3"/>
+  
+  <!-- Help center interface -->
+  <rect x="100" y="100" width="600" height="300" rx="12" fill="#fbcfe8" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Search bar -->
+  <rect x="150" y="150" width="500" height="40" rx="20" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <text x="180" y="175" fill="#be185d" font-family="system-ui, sans-serif" font-size="14">How can we help you?</text>
+  <circle cx="620" cy="170" r="12" fill="#ec4899"/>
+  <text x="620" y="175" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">?</text>
+  
+  <!-- Help categories -->
+  <rect x="150" y="220" width="140" height="80" rx="8" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="160" y="235" width="120" height="6" rx="3" fill="#ec4899"/>
+  <rect x="160" y="250" width="100" height="4" rx="2" fill="#f3e8ff"/>
+  <rect x="160" y="265" width="80" height="4" rx="2" fill="#fce7f3"/>
+  
+  <rect x="310" y="220" width="140" height="80" rx="8" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="320" y="235" width="110" height="6" rx="3" fill="#ec4899"/>
+  <rect x="320" y="250" width="90" height="4" rx="2" fill="#f3e8ff"/>
+  <rect x="320" y="265" width="70" height="4" rx="2" fill="#fce7f3"/>
+  
+  <rect x="470" y="220" width="140" height="80" rx="8" fill="#ffffff" stroke="#f3e8ff" stroke-width="1"/>
+  <rect x="480" y="235" width="100" height="6" rx="3" fill="#ec4899"/>
+  <rect x="480" y="250" width="120" height="4" rx="2" fill="#f3e8ff"/>
+  <rect x="480" y="265" width="90" height="4" rx="2" fill="#fce7f3"/>
+  
+  <text x="400" y="60" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="20" font-weight="600">Affirm Help Center</text>
+</svg>

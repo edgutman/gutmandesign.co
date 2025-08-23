@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light pink background -->
+  <rect width="1200" height="630" fill="#fce7f3"/>
+  
+  <!-- Centered text -->
+  <text x="600" y="280" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="48" font-weight="600">Eddy Gutman</text>
+  <text x="600" y="330" text-anchor="middle" fill="#be185d" font-family="system-ui, sans-serif" font-size="24">Product Design Consultant</text>
+  <text x="600" y="370" text-anchor="middle" fill="#be185d" font-family="system-ui, sans-serif" font-size="20">gutmandesign.co</text>
+</svg>

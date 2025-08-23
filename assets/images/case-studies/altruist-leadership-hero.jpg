@@ -1,0 +1,42 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#fce7f3"/>
+  
+  <!-- Team growth visualization -->
+  <rect x="100" y="100" width="600" height="300" rx="12" fill="#fbcfe8" stroke="#f3e8ff" stroke-width="2"/>
+  
+  <!-- Team members representation -->
+  <text x="150" y="180" fill="#9f1239" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Team: 5</text>
+  <circle cx="200" cy="200" r="15" fill="#ec4899"/>
+  <circle cx="230" cy="200" r="15" fill="#ec4899"/>
+  <circle cx="260" cy="200" r="15" fill="#ec4899"/>
+  <circle cx="290" cy="200" r="15" fill="#ec4899"/>
+  <circle cx="320" cy="200" r="15" fill="#ec4899"/>
+  
+  <!-- Arrow -->
+  <path d="M350 200 L450 200" stroke="#ec4899" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ec4899"/>
+    </marker>
+  </defs>
+  
+  <!-- Grown team -->
+  <text x="480" y="180" fill="#9f1239" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Team: 12</text>
+  <circle cx="480" cy="200" r="12" fill="#ec4899"/>
+  <circle cx="505" cy="200" r="12" fill="#ec4899"/>
+  <circle cx="530" cy="200" r="12" fill="#ec4899"/>
+  <circle cx="555" cy="200" r="12" fill="#ec4899"/>
+  <circle cx="480" cy="225" r="12" fill="#ec4899"/>
+  <circle cx="505" cy="225" r="12" fill="#ec4899"/>
+  <circle cx="530" cy="225" r="12" fill="#ec4899"/>
+  <circle cx="555" cy="225" r="12" fill="#ec4899"/>
+  <circle cx="480" cy="250" r="12" fill="#ec4899"/>
+  <circle cx="505" cy="250" r="12" fill="#ec4899"/>
+  <circle cx="530" cy="250" r="12" fill="#ec4899"/>
+  <circle cx="555" cy="250" r="12" fill="#ec4899"/>
+  
+  <!-- Growth percentage -->
+  <text x="400" y="320" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="24" font-weight="700">140% Growth</text>
+  
+  <text x="400" y="60" text-anchor="middle" fill="#9f1239" font-family="system-ui, sans-serif" font-size="20" font-weight="600">Altruist Leadership</text>
+</svg>
