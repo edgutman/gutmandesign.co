@@ -1,0 +1,17 @@
+# Netlify redirects and rewrites
+
+# Redirect old URLs if needed
+# /old-page /new-page 301
+
+# Handle case study URLs
+/affirm-notification /case-study-affirm.html 200
+/quantcast-analytics /case-study-quantcast.html 200
+/lyft-nfc /case-study-lyft.html 200
+/affirm-virtual-card /case-study-affirm-virtual.html 200
+/affirm-help-center /case-study-affirm-help.html 200
+
+# Password protected content
+/altruist /password.html 200
+
+# Fallback for 404s
+/* /index.html 404
