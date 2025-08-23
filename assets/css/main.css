@@ -278,15 +278,15 @@ a {
 .case-study-card {
   position: relative;
   background: var(--bg-white);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
 }
 
 .case-study-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 
 .case-study-image {
