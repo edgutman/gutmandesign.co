@@ -710,6 +710,333 @@ a {
   }
 }
 
+/* Case Study Page Styles */
+.case-hero {
+  padding-top: calc(var(--space-3xl) + 60px);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.case-nav {
+  margin-bottom: var(--space-lg);
+}
+
+.back-link {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+}
+
+.case-hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.case-hero-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0;
+  font-size: var(--font-size-sm);
+}
+
+.case-meta span {
+  color: var(--text-light);
+}
+
+.case-company {
+  font-weight: 600;
+  color: var(--primary-color) !important;
+}
+
+.case-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  margin-top: var(--space-md);
+  max-width: 600px;
+}
+
+@media (min-width: 1024px) {
+  .case-hero-content {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Case Overview */
+.case-overview {
+  background: var(--bg-white);
+}
+
+.overview-item {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.overview-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xs);
+}
+
+.overview-text {
+  color: var(--text-light);
+}
+
+/* Case Process */
+.case-process {
+  background: var(--bg-light);
+}
+
+.process-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.process-section:last-child {
+  margin-bottom: 0;
+}
+
+.process-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.process-description {
+  color: var(--text-light);
+  margin-bottom: var(--space-md);
+}
+
+.process-list {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.process-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  color: var(--text-light);
+}
+
+.process-list li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Insights Box */
+.insights-box {
+  background: var(--bg-white);
+  border-left: 4px solid var(--primary-color);
+  padding: var(--space-md);
+  border-radius: 6px;
+  margin-top: var(--space-md);
+}
+
+.insights-title {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.insights-list {
+  list-style: none;
+}
+
+.insights-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xs);
+  color: var(--text-dark);
+}
+
+.insights-list li::before {
+  content: '→';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Case Results */
+.case-results {
+  background: var(--bg-white);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.results-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-md);
+}
+
+.metrics-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.metric-item {
+  background: var(--bg-light);
+  padding: var(--space-md);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-number {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--space-xs);
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.learnings-list {
+  list-style: none;
+}
+
+.learnings-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text-light);
+}
+
+.learnings-list li::before {
+  content: '✓';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .metrics-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Patent Note */
+.patent-note {
+  margin-top: var(--space-xl);
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.patent-title {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.patent-description {
+  color: var(--text-light);
+}
+
+/* Case Navigation */
+.case-navigation {
+  background: var(--bg-light);
+}
+
+.case-nav-item {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.case-nav-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.case-nav-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: var(--space-xs) 0;
+}
+
+.case-nav-description {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* Case CTA */
+.case-cta {
+  background: var(--bg-white);
+  text-align: center;
+}
+
+.case-cta .cta-content h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.case-cta .cta-description {
+  color: var(--text-light);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-cta .cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .case-cta .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 /* Utility Classes */
 .hidden {
   display: none;
