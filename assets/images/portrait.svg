@@ -1,0 +1,17 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="140" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Simple portrait placeholder -->
+  <circle cx="150" cy="120" r="35" fill="#64748b"/>
+  <path d="M100 220 Q150 180 200 220 L200 280 Q150 260 100 280 Z" fill="#64748b"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="80" cy="80" r="4" fill="#2563eb" opacity="0.6"/>
+  <circle cx="220" cy="90" r="3" fill="#2563eb" opacity="0.4"/>
+  <circle cx="250" cy="180" r="5" fill="#2563eb" opacity="0.3"/>
+  <circle cx="60" cy="200" r="3" fill="#2563eb" opacity="0.5"/>
+  
+  <!-- Text overlay -->
+  <text x="150" y="260" text-anchor="middle" fill="#475569" font-family="system-ui" font-size="12" font-weight="500">Eddy Gutman</text>
+</svg>
