@@ -170,45 +170,4 @@ document.addEventListener('DOMContentLoaded', () => {
   new PortfolioApp();
 });
 
-// Add mobile navigation styles
-const mobileNavStyles = `
-  @media (max-width: 767px) {
-    .nav-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      flex-direction: column;
-      padding: 1rem;
-      border-top: 1px solid var(--border-color);
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-links.nav-open {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .nav-toggle.active .nav-toggle-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .nav-toggle.active .nav-toggle-line:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .nav-toggle.active .nav-toggle-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-    }
-  }
-`;
-
-// Inject mobile navigation styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = mobileNavStyles;
-document.head.appendChild(styleSheet);
+// Mobile navigation styles are now in main.css
