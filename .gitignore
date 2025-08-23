@@ -40,3 +40,5 @@ wireframes.md
 
 # Cache Files
 .cache/
+# Local Netlify folder
+.netlify

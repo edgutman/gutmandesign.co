@@ -462,6 +462,254 @@ a {
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* About Page Styles */
+.nav-link-active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.about-hero {
+  padding-top: calc(var(--space-3xl) + 60px);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.about-hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  text-align: center;
+}
+
+.about-portrait {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+}
+
+.about-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  margin: var(--space-md) 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+  .about-hero-content {
+    grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+    gap: var(--space-2xl);
+  }
+  
+  .about-subtitle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Story Section */
+.about-story {
+  background: var(--bg-white);
+}
+
+.about-content h2 {
+  margin-bottom: var(--space-xl);
+}
+
+.story-text p {
+  margin-bottom: var(--space-md);
+  max-width: 700px;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline */
+.about-experience {
+  background: var(--bg-light);
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-xl);
+  padding-left: var(--space-2xl);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid var(--bg-white);
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-role {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.timeline-company {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.timeline-period {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.timeline-description {
+  color: var(--text-light);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-impact {
+  padding: var(--space-sm);
+  background: var(--bg-white);
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: var(--space-xl);
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-right: 0;
+    padding-left: var(--space-xl);
+  }
+  
+  .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item:nth-child(even) .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Approach Section */
+.about-approach {
+  background: var(--bg-white);
+}
+
+.approach-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.approach-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.approach-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xs);
+}
+
+.approach-description {
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+}
+
+/* Personal Section */
+.about-personal {
+  background: var(--bg-light);
+}
+
+.personal-content h2 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.personal-text p {
+  margin-bottom: var(--space-md);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personal-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* About CTA Section */
+.about-cta {
+  background: var(--bg-white);
+  text-align: center;
+}
+
+.cta-content h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.cta-description {
+  color: var(--text-light);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 /* Utility Classes */
 .hidden {
   display: none;
