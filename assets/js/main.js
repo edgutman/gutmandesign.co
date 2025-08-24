@@ -1,14 +1,63 @@
 // Main JavaScript functionality for gutmandesign.co
 class PortfolioApp {
   constructor() {
+    this.theme = this.getStoredTheme() || 'light';
     this.init();
   }
 
   init() {
+    this.setupTheme();
     this.setupNavigation();
     this.setupSmoothScrolling();
     this.setupLazyLoading();
     this.setupAnimations();
+  }
+
+  // Dark mode management
+  setupTheme() {
+    this.applyTheme(this.theme);
+    this.createThemeToggle();
+  }
+
+  getStoredTheme() {
+    return localStorage.getItem('theme');
+  }
+
+  setStoredTheme(theme) {
+    localStorage.setItem('theme', theme);
+  }
+
+  applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    this.theme = theme;
+    this.setStoredTheme(theme);
+  }
+
+  toggleTheme() {
+    const newTheme = this.theme === 'light' ? 'dark' : 'light';
+    this.applyTheme(newTheme);
+    this.updateToggleIcon();
+  }
+
+  createThemeToggle() {
+    const toggle = document.createElement('button');
+    toggle.className = 'theme-toggle';
+    toggle.innerHTML = this.getToggleIcon();
+    toggle.setAttribute('aria-label', 'Toggle dark mode');
+    toggle.addEventListener('click', () => this.toggleTheme());
+    
+    document.body.appendChild(toggle);
+  }
+
+  getToggleIcon() {
+    return this.theme === 'light' ? '🌙' : '☀️';
+  }
+
+  updateToggleIcon() {
+    const toggle = document.querySelector('.theme-toggle');
+    if (toggle) {
+      toggle.innerHTML = this.getToggleIcon();
+    }
   }
 
   // Mobile navigation toggle

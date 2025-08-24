@@ -18,6 +18,9 @@ class PasswordProtection {
     const overlay = document.getElementById('passwordOverlay');
     if (!overlay) return;
     
+    // Setup event listeners first
+    this.setupEventListeners();
+    
     // Check if user is locked out
     if (this.isLockedOut()) {
       this.showLockoutMessage();
@@ -30,8 +33,6 @@ class PasswordProtection {
     } else {
       this.showPasswordForm();
     }
-    
-    this.setupEventListeners();
   }
   
   isAuthenticated() {
@@ -91,6 +92,53 @@ class PasswordProtection {
       // Focus input on load
       input.focus();
     }
+    
+    // Handle close button with multiple methods for browser compatibility
+    this.setupCloseHandlers();
+    
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' || e.keyCode === 27) {
+        this.closeModal();
+      }
+    });
+  }
+
+  setupCloseHandlers() {
+    // Set up close button listener with retry mechanism for browser compatibility
+    const trySetupClose = () => {
+      const closeBtn = document.getElementById('passwordClose');
+      
+      if (closeBtn) {
+        // Use multiple event types for better browser compatibility
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.closeModal();
+        });
+        
+        // Fallback for browsers that might interfere with click events
+        closeBtn.onclick = (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.closeModal();
+          return false;
+        };
+        
+        return true;
+      }
+      return false;
+    };
+    
+    // Try immediately, with fallback retry
+    if (!trySetupClose()) {
+      setTimeout(trySetupClose, 100);
+    }
+  }
+
+  closeModal() {
+    // Redirect back to homepage
+    window.location.href = '/';
   }
   
   validatePassword(inputPassword) {

@@ -25,6 +25,16 @@
   --space-3xl: 6rem;
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --accent-color: #f1f5f9;
+  --text-dark: #e2e8f0;
+  --text-light: #94a3b8;
+  --bg-light: #1e293b;
+  --bg-white: #0f172a;
+  --border-color: #334155;
+}
+
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;
@@ -126,6 +136,10 @@ a {
   z-index: 1000;
 }
 
+[data-theme="dark"] .nav {
+  background: rgba(15, 23, 42, 0.95);
+}
+
 .nav .container {
   display: flex;
   justify-content: space-between;
@@ -175,6 +189,7 @@ a {
 /* Mobile Navigation */
 @media (max-width: 767px) {
   .nav-links {
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
@@ -189,6 +204,12 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    z-index: 1001;
+  }
+  
+  [data-theme="dark"] .nav-links {
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   
   .nav-links.nav-open {
@@ -247,9 +268,11 @@ a {
 }
 
 .hero-portrait {
-  max-width: 300px;
+  max-width: 382px;
   width: 100%;
-  height: auto;
+  height: 382px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .hero-subtitle {
@@ -273,6 +296,7 @@ a {
     grid-template-columns: 1fr 1.2fr;
     text-align: left;
     gap: var(--space-2xl);
+    align-items: start;
   }
   
   .hero-subtitle {
@@ -310,6 +334,10 @@ a {
 .btn-primary:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: #3b82f6;
 }
 
 .btn-secondary {
@@ -1104,6 +1132,10 @@ a {
   transition: opacity 0.3s ease;
 }
 
+[data-theme="dark"] .password-overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
 .password-overlay.fade-out {
   opacity: 0;
 }
@@ -1120,6 +1152,36 @@ a {
   padding: var(--space-2xl);
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.password-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.password-close:hover {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transform: scale(1.1);
+}
+
+.password-close:active {
+  transform: scale(0.95);
 }
 
 .lock-icon {
@@ -1171,6 +1233,11 @@ a {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
+[data-theme="dark"] .password-input.error {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.1);
+}
+
 .password-input.shake {
   animation: shake 0.5s ease-in-out;
 }
@@ -1206,6 +1273,10 @@ a {
   font-size: var(--font-size-sm);
   margin-top: var(--space-xs);
   text-align: left;
+}
+
+[data-theme="dark"] .error-message {
+  color: #f87171;
 }
 
 .password-help {
@@ -1311,6 +1382,10 @@ a {
   transform: translateY(-1px);
 }
 
+[data-theme="dark"] .btn-primary:hover {
+  background: #3b82f6;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .input-group {
@@ -1324,6 +1399,51 @@ a {
   .password-form {
     padding: var(--space-xl);
   }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--accent-color);
+  color: var(--bg-white);
+  box-shadow: 0 4px 12px rgba(241, 245, 249, 0.3);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  box-shadow: 0 6px 20px rgba(241, 245, 249, 0.4);
+}
+
+/* Smooth theme transitions */
+*:not(.nav-links) {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Utility Classes */
