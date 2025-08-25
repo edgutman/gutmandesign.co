@@ -259,9 +259,10 @@ class PasswordProtection {
       form.innerHTML = `
         <div class="lockout-message">
           <div class="lockout-icon">⏰</div>
-          <h3>Too many attempts</h3>
-          <p>Please wait ${remaining} minute${remaining === 1 ? '' : 's'} before trying again.</p>
-          <p class="help-text">Don't have the password? <a href="/#contact">Contact me</a></p>
+          <h3 class="headline-md">Too many attempts</h3>
+          <p class="body-text">Please wait ${remaining} minute${remaining === 1 ? '' : 's'} before trying again.</p>
+          <p class="body-text">Don't have the password?</p>
+          <p class="body-text"><a href="/#contact">Contact me</a></p>
         </div>
       `;
       

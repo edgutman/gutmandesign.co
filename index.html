@@ -9,7 +9,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="Eddy Gutman - Product Design Consultant">
-    <meta property="og:description" content="Product design that moves the numbers that matter">
+    <meta property="og:description" content="I bring an engineer's mindset to design challenges, combining rigorous research with data-driven decisions and systems thinking that helps teams scale. I work with teams everywhere, currently available for consulting projects.">
     <meta property="og:image" content="/assets/images/og-image.jpg">
     <meta property="og:url" content="https://gutmandesign.co">
     
@@ -17,41 +17,43 @@
     <meta name="twitter:card" content="summary_large_image">
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="/" class="nav-logo">Eddy Gutman</a>
+        <div class="grid-container">
+            <div class="content-8col">
+                <div class="nav-content">
+                    <div class="nav-brand">
+                        <a href="/" class="nav-logo">Gutman Design Co.</a>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#work" class="nav-link">Work</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="/assets/files/eddygutman-resume.pdf" class="nav-link" target="_blank">Resume</a>
+                    </div>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                    </button>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#work" class="nav-link">Work</a>
-                <a href="/about.html" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="/resume.pdf" class="nav-link" target="_blank">Resume</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-visual">
-                    <img src="/assets/images/portrait.JPG" alt="Eddy Gutman illustration" class="hero-portrait">
-                </div>
-                <div class="hero-text">
-                    <h1 class="headline-xl">Product design that moves the numbers that matter</h1>
-                    <p class="hero-subtitle">I help consumer and fintech companies design products that drive measurable results</p>
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn-primary">Start a Project</a>
-                        <a href="#work" class="btn-secondary">View Work</a>
+        <div class="grid-container">
+            <div class="content-8col">
+                <div class="hero-content">
+                    <div class="hero-visual">
+                        <img src="/assets/images/portrait.JPG" alt="Eddy Gutman illustration" class="hero-portrait">
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="headline-xl">I bring an engineer's mindset to design challenges, combining <span class="headline-xl-emphasis">rigorous research</span> with <span class="headline-xl-emphasis">data-driven decisions</span> and <span class="headline-xl-emphasis">systems thinking</span> that helps teams scale. I work with teams everywhere, currently <span class="headline-xl-emphasis">available for consulting</span> projects.</h1>
                     </div>
                 </div>
             </div>
@@ -60,95 +62,82 @@
 
     <!-- Selected Work Section -->
     <section id="work" class="work section">
-        <div class="container">
-            <h2 class="headline-lg section-title">Selected Work</h2>
-            <div class="grid-3">
+        <div class="grid-container">
+            <div class="content-8col">
+                <h2 class="headline-lg section-title">Selected Work</h2>
+                <div class="grid-3">
                 <!-- Case Study 1: Affirm Notification Center -->
                 <article class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="/assets/images/case-studies/affirm-notification-preview.jpg" alt="Affirm notification center interface">
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">Increased loan repayment by 1%+</div>
-                        <h3 class="case-study-title">Affirm Notification Center</h3>
-                        <p class="case-study-description">Designed a comprehensive in-app notification system that helped customers stay on track with payments</p>
-                        <div class="case-study-tags">
-                            <span class="tag">Growth Design</span>
-                            <span class="tag">Fintech</span>
-                            <span class="tag">Mobile</span>
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <img src="/assets/images/case-studies/affirm-notification-preview.png" alt="Affirm notification center interface">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Affirm Notification Center</h3>
+                            <div class="metric-highlight">Increased loan repayment by 1%+</div>
+                            <p class="case-study-description">Designed an in-app notification system that helped customers stay on track with payments</p>
                         </div>
                     </div>
                     <a href="/case-study-affirm.html" class="case-study-link" aria-label="Read Affirm Notification Center case study"></a>
                 </article>
 
                 <!-- Case Study 2: Altruist (Password Protected) -->
-                <article class="case-study-card case-study-protected">
-                    <div class="case-study-image">
-                        <div class="protected-overlay">
-                            <span class="lock-icon">🔒</span>
+                <article class="case-study-card case-study-protected gradient-green">
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <div class="protected-overlay">
+                                <span class="lock-icon">🔒</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">Led team growth from 5 to 12</div>
-                        <h3 class="case-study-title">Altruist Leadership</h3>
-                        <p class="case-study-description">Design leadership and team scaling at fast-growing fintech startup</p>
-                        <div class="case-study-tags">
-                            <span class="tag">Leadership</span>
-                            <span class="tag">Password Required</span>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Altruist Leadership</h3>
+                            <div class="metric-highlight">Led team growth from 5 to 12</div>
+                            <p class="case-study-description">Design leadership and team scaling at fast-growing fintech startup</p>
                         </div>
                     </div>
                     <a href="/password.html" class="case-study-link" aria-label="Access password protected case study"></a>
                 </article>
 
                 <!-- Case Study 3: Quantcast Analytics -->
-                <article class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="/assets/images/case-studies/quantcast-onboarding-preview.jpg" alt="Quantcast analytics platform interface">
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">Reduced client onboarding by 85%</div>
-                        <h3 class="case-study-title">Quantcast Analytics Redesign</h3>
-                        <p class="case-study-description">Redesigned pixel tracking tools to get advertisers running in minutes instead of hours</p>
-                        <div class="case-study-tags">
-                            <span class="tag">B2B SaaS</span>
-                            <span class="tag">Analytics</span>
-                            <span class="tag">Onboarding</span>
+                <article class="case-study-card gradient-green">
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <img src="/assets/images/case-studies/quantcast-onboarding-preview.png" alt="Quantcast analytics platform interface">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Quantcast Analytics Redesign</h3>
+                            <div class="metric-highlight">Reduced client onboarding by 85%</div>
+                            <p class="case-study-description">Redesigned pixel tracking tools to get advertisers running in minutes instead of hours</p>
                         </div>
                     </div>
                     <a href="/case-study-quantcast.html" class="case-study-link" aria-label="Read Quantcast Analytics case study"></a>
                 </article>
 
                 <!-- Case Study 4: Affirm Virtual Card -->
-                <article class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="/assets/images/case-studies/affirm-virtual-card-preview.jpg" alt="Affirm virtual card interface">
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">4% increase in split pay loans</div>
-                        <h3 class="case-study-title">Affirm Virtual Card Redesign</h3>
-                        <p class="case-study-description">Complete redesign of virtual card creation and management experience</p>
-                        <div class="case-study-tags">
-                            <span class="tag">Product Design</span>
-                            <span class="tag">Growth</span>
-                            <span class="tag">Mobile</span>
+                <article class="case-study-card gradient-primary">
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <img src="/assets/images/case-studies/affirm-virtual-card-preview.png" alt="Affirm virtual card interface">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Affirm Virtual Card Redesign</h3>
+                            <div class="metric-highlight">4% increase in split pay loans</div>
+                            <p class="case-study-description">Complete redesign of virtual card creation and management experience</p>
                         </div>
                     </div>
                     <a href="/case-study-affirm-virtual.html" class="case-study-link" aria-label="Read Affirm Virtual Card case study"></a>
                 </article>
 
                 <!-- Case Study 5: Lyft NFC Innovation -->
-                <article class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="/assets/images/case-studies/lyft-nfc-preview.jpg" alt="Lyft NFC payment interface">
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">Patent-pending NFC innovation</div>
-                        <h3 class="case-study-title">Lyft Payment System</h3>
-                        <p class="case-study-description">Co-invented tap-to-store credit card experience combining security with convenience</p>
-                        <div class="case-study-tags">
-                            <span class="tag">Innovation</span>
-                            <span class="tag">Patent Pending</span>
-                            <span class="tag">NFC</span>
+                <article class="case-study-card gradient-purple">
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <img src="/assets/images/case-studies/lyft-nfc-preview.png" alt="Lyft NFC payment interface">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Lyft Payment System</h3>
+                            <div class="metric-highlight">Patent-pending NFC innovation</div>
+                            <p class="case-study-description">Co-invented tap-to-store credit card experience combining security with convenience</p>
                         </div>
                     </div>
                     <a href="/case-study-lyft.html" class="case-study-link" aria-label="Read Lyft NFC Innovation case study"></a>
@@ -156,30 +145,29 @@
 
                 <!-- Case Study 6: Affirm Help Center -->
                 <article class="case-study-card">
-                    <div class="case-study-image">
-                        <img src="/assets/images/case-studies/affirm-help-center-preview.jpg" alt="Affirm help center interface">
-                    </div>
-                    <div class="case-study-content">
-                        <div class="metric-highlight">31% increase in CSAT</div>
-                        <h3 class="case-study-title">Affirm Help Center</h3>
-                        <p class="case-study-description">Streamlined support experience reducing contact volume by 32%</p>
-                        <div class="case-study-tags">
-                            <span class="tag">Service Design</span>
-                            <span class="tag">Customer Experience</span>
-                            <span class="tag">Support</span>
+                    <div class="case-study-card-inner">
+                        <div class="case-study-image">
+                            <img src="/assets/images/case-studies/affirm-help-center-preview.png" alt="Affirm help center interface">
+                        </div>
+                        <div class="case-study-content">
+                            <h3 class="case-study-title">Affirm Help Center</h3>
+                            <div class="metric-highlight">31% increase in CSAT</div>
+                            <p class="case-study-description">Streamlined support experience reducing contact volume by 32%</p>
                         </div>
                     </div>
                     <a href="/case-study-affirm-help.html" class="case-study-link" aria-label="Read Affirm Help Center case study"></a>
                 </article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services section">
-        <div class="container">
-            <h2 class="headline-lg section-title">How I Can Help</h2>
-            <div class="grid-2">
+        <div class="grid-container">
+            <div class="content-8col">
+                <h2 class="headline-lg section-title">How I Can Help</h2>
+                <div class="grid-2">
                 <div class="service-block">
                     <h3 class="service-title">Product Design & Strategy</h3>
                     <p class="service-description">End-to-end design for consumer and fintech products that perform</p>
@@ -193,8 +181,9 @@
                     <p class="service-description">Uncover what your users actually need through foundational research studies</p>
                 </div>
                 <div class="service-block">
-                    <h3 class="service-title">Design Team Leadership & Scaling</h3>
-                    <p class="service-description">Transform your design practice with experienced leadership and proven scaling processes</p>
+                    <h3 class="service-title">Design Team Leadership</h3>
+                    <p class="service-description">Transform your design practice with experienced leadership</p>
+                </div>
                 </div>
             </div>
         </div>
@@ -202,29 +191,39 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="headline-lg section-title">Let's Work Together</h2>
-            <div class="grid-2">
+        <div class="grid-container">
+            <div class="content-8col">
+                <h2 class="headline-lg section-title">Let's Work Together</h2>
+                <div class="grid-2">
                 <div class="contact-block">
                     <h3 class="contact-title">Start a Project</h3>
-                    <p class="contact-description">Ready to improve your product's key metrics?</p>
+                    <p class="contact-description">Ready to improve your product's key metrics? Drop me a line</p>
                     <a href="mailto:hi@gutmandesign.co" class="btn-primary">Get in touch</a>
                 </div>
                 <div class="contact-block">
                     <h3 class="contact-title">Explore Opportunities</h3>
                     <p class="contact-description">Currently open to full-time roles at growth-stage companies</p>
-                    <a href="/resume.pdf" class="btn-secondary" target="_blank">View resume</a>
+                    <a href="/assets/files/eddygutman-resume.pdf" class="btn-secondary" target="_blank">View resume</a>
                 </div>
-            </div>
-            <div class="contact-info">
-                <p class="contact-details">
-                    <a href="mailto:hi@gutmandesign.co">hi@gutmandesign.co</a>
-                    <a href="https://linkedin.com/in/egutman" target="_blank">linkedin.com/in/egutman</a>
-                </p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icons">
+                        <a href="mailto:hello@gutmandesign.co" class="contact-icon-link" aria-label="Email hello@gutmandesign.co">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/edgutman" target="_blank" class="contact-icon-link" aria-label="LinkedIn profile">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="/assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
