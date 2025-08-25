@@ -1,0 +1,13 @@
+User-agent: *
+
+# Disallow password-protected content
+Disallow: /password.html
+
+# Disallow all assets (images, files, fonts, etc.)
+Disallow: /assets/
+
+# Allow all other content
+Allow: /
+
+# Sitemap location
+Sitemap: https://gutmandesign.co/sitemap.xml
