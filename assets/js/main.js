@@ -166,7 +166,7 @@ class PortfolioApp {
       });
 
       // Observe elements that should animate on scroll
-      const animateElements = document.querySelectorAll('.case-study-card, .service-block, .section-title');
+      const animateElements = document.querySelectorAll('.case-study-card, .service-block, .section-title, .experience');
       animateElements.forEach(el => {
         el.classList.add('animate-on-scroll');
         animationObserver.observe(el);

@@ -60,11 +60,11 @@
   --card-accent: #4FC3F7;
   
   /* Typography Scale from Design System */
-  --font-hero: 48px;
-  --font-h1: 40px;
-  --font-h2: 24px;
+  --font-hero: 36px;
+  --font-h1: 32px;
+  --font-h2: 20px;
   --font-body: 16px;
-  --font-button: 20px;
+  --font-button: 16px;
   --font-highlight: 14px;
   
   /* Font Families */
@@ -147,7 +147,7 @@ a {
   letter-spacing: -0.04em;
   color: var(--primary-color);
   margin-bottom: var(--space-l);
-  text-align: center;
+  text-align: left;
 }
 
 /* 12-Column Grid System */
@@ -242,7 +242,7 @@ a {
   font-family: var(--font-sans);
   font-size: var(--font-hero);
   font-weight: 200; /* Ultra Light */
-  line-height: 45pt;
+  line-height: 42px;
   letter-spacing: -0.02em;
   color: var(--primary-color);
 }
@@ -252,7 +252,7 @@ a {
   font-family: var(--font-sans);
   font-size: var(--font-hero);
   font-weight: 500; /* Medium */
-  line-height: 45pt;
+  line-height: 42px;
   letter-spacing: -0.02em;
   color: var(--primary-color);
 }
@@ -286,13 +286,13 @@ a {
   color: var(--primary-color);
 }
 
-/* Button/Header - Avenir Next Medium 20pt, -1% letter spacing */
+/* Button/Header - Avenir Next Regular 16px */
 .button-text {
   font-family: var(--font-sans);
   font-size: var(--font-button);
-  font-weight: 500; /* Medium */
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-weight: 400; /* Regular */
+  line-height: 1;
+  letter-spacing: -0.16px;
   color: var(--primary-color);
 }
 
@@ -338,8 +338,8 @@ a {
 .nav-logo {
   font-family: var(--font-sans);
   font-size: var(--font-button);
-  font-weight: 500; /* Medium */
-  letter-spacing: -0.01em;
+  font-weight: 400; /* Regular */
+  letter-spacing: 0.32px;
   color: var(--primary-color);
 }
 
@@ -351,8 +351,8 @@ a {
 .nav-link {
   font-family: var(--font-sans);
   font-size: var(--font-button);
-  font-weight: 500; /* Medium */
-  letter-spacing: -0.01em;
+  font-weight: 400; /* Regular */
+  letter-spacing: 0.32px;
   color: var(--primary-color);
   transition: color 0.2s ease;
 }
@@ -467,24 +467,44 @@ a {
   text-align: left;
 }
 
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-visual {
+    flex-shrink: 0;
+  }
+}
+
 .hero-visual {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-/* Force 112px avatar size */
+/* Hero portrait styling */
 .hero-visual .hero-portrait,
 .hero-portrait {
-  width: 112px !important;
-  height: 112px !important;
-  max-width: 112px !important;
-  max-height: 112px !important;
-  min-width: 112px !important;
-  min-height: 112px !important;
+  width: 112px;
+  height: 112px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 0%;
   flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-visual .hero-portrait,
+  .hero-portrait {
+    width: 181px;
+    height: 181px;
+  }
 }
 
 .hero-subtitle {
@@ -518,8 +538,8 @@ a {
   border-radius: var(--radius-m);
   font-family: var(--font-sans);
   font-size: var(--font-button);
-  font-weight: 500; /* Medium */
-  letter-spacing: -0.01em;
+  font-weight: 400; /* Regular */
+  letter-spacing: -0.16px;
   transition: all 0.2s ease;
   cursor: pointer;
   border: 2px solid transparent;
@@ -558,20 +578,20 @@ a {
   position: relative;
   background: var(--gradient-card);
   border: none;
-  border-radius: 0 32px 32px 32px;
+  border-radius: 8px;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 2px; /* Creates space for the gradient border */
+  padding: 0;
 }
 
 .case-study-card-inner {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--inverse-color);
-  border-radius: 0 30px 30px 30px;
+  background: transparent;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -581,13 +601,13 @@ a {
 }
 
 .case-study-image {
-  height: 216px;
-  background: var(--gradient-card);
+  height: 400px;
+  background: transparent;
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 0 28px 0 0; /* Slightly smaller radius to account for inner container */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
   overflow: hidden;
   padding: 24px;
   box-sizing: border-box;
@@ -602,20 +622,24 @@ a {
 
 .case-study-content {
   padding: 24px;
-  background: var(--inverse-color);
+  background: rgba(255, 255, 255, 0.8);
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 24px;
+  border-radius: 0 0 8px 8px;
 }
 
 .metric-highlight {
   font-family: var(--font-sans);
   font-size: var(--font-highlight);
-  font-weight: 700; /* Bold */
-  line-height: 1.3;
-  color: var(--card-accent);
+  font-weight: 400; /* Regular */
+  line-height: 1;
+  background: var(--gradient-card);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
 }
 
@@ -623,17 +647,17 @@ a {
   font-family: var(--font-sans);
   font-size: var(--font-h2);
   font-weight: 500; /* Medium */
-  line-height: 1.3;
+  line-height: 1;
   color: var(--primary-color);
   margin: 0;
 }
 
 .case-study-description {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-body);
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
+  line-height: 1.4;
+  letter-spacing: 0.32px;
   color: var(--secondary-color);
   margin: 0;
 }
@@ -642,12 +666,12 @@ a {
 
 .case-study-link {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
-  border-radius: 0 30px 30px 30px;
+  border-radius: 8px;
 }
 
 /* Card Gradient Variants */
@@ -655,24 +679,44 @@ a {
   background: var(--gradient-primary);
 }
 
-.case-study-card.gradient-primary .case-study-image {
+.case-study-card.gradient-primary .metric-highlight {
   background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .case-study-card.gradient-purple {
   background: var(--gradient-purple);
 }
 
-.case-study-card.gradient-purple .case-study-image {
+.case-study-card.gradient-purple .metric-highlight {
   background: var(--gradient-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .case-study-card.gradient-green {
   background: var(--gradient-green);
 }
 
-.case-study-card.gradient-green .case-study-image {
+.case-study-card.gradient-green .metric-highlight {
   background: var(--gradient-green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.case-study-card.gradient-orange {
+  background: var(--gradient-orange);
+}
+
+.case-study-card.gradient-orange .metric-highlight {
+  background: var(--gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Protected Case Study */
@@ -720,37 +764,125 @@ a {
   color: var(--secondary-color);
 }
 
+/* Experience Section */
+.experience {
+  background: var(--bg-white);
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-row {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  min-height: 40px;
+}
+
+.company-name {
+  font-family: var(--font-sans);
+  font-size: var(--font-h2);
+  font-weight: 500; /* Medium */
+  line-height: 1;
+  color: var(--primary-color);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.experience-divider {
+  flex: 1;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin: 0 16px;
+  align-self: center;
+}
+
+.experience-details {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+
+.job-title {
+  font-family: var(--font-sans);
+  font-size: var(--font-h2);
+  font-weight: 500; /* Medium */
+  line-height: 1;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.job-dates {
+  font-family: var(--font-sans);
+  font-size: var(--font-h2);
+  font-weight: 500; /* Medium */
+  line-height: 1;
+  color: var(--secondary-color);
+  white-space: nowrap;
+  text-align: right;
+  min-width: 96px;
+}
+
+/* Mobile adjustments for Experience */
+@media (max-width: 767px) {
+  .experience-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    min-height: auto;
+  }
+  
+  .experience-divider {
+    display: none;
+  }
+  
+  .experience-details {
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .job-dates {
+    min-width: auto;
+    text-align: left;
+  }
+}
+
 /* Contact Section */
 .contact {
   background: var(--bg-hero);
 }
 
 .contact-block {
-  text-align: center;
-  padding: var(--space-lg);
+  text-align: left;
+  padding: 0;
 }
 
 .contact-title {
   font-family: var(--font-sans);
   font-size: var(--font-h2);
   font-weight: 500; /* Medium */
-  line-height: 1.3;
+  line-height: 1;
   color: var(--primary-color);
   margin-bottom: var(--space-xs);
 }
 
 .contact-description {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--font-body);
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
+  line-height: 1.4;
+  letter-spacing: 0.32px;
   color: var(--secondary-color);
   margin-bottom: var(--space-s);
 }
 
 .contact-info {
-  text-align: center;
+  text-align: left;
   margin-top: var(--space-xl);
   padding-top: var(--space-xl);
 }
@@ -782,7 +914,7 @@ a {
 .contact-icons {
   display: flex;
   gap: var(--space-lg);
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: var(--space-lg);
 }
 
@@ -836,6 +968,12 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fade-in {
@@ -1114,7 +1252,7 @@ a {
 
 .case-nav-item {
   background: var(--bg-white);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: var(--space-lg);
   transition: all 0.2s ease;
   display: block;
@@ -1514,17 +1652,24 @@ a {
 [data-theme="dark"] .contact-description,
 [data-theme="dark"] .section-title,
 [data-theme="dark"] .nav-logo,
-[data-theme="dark"] .nav-link {
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .company-name,
+[data-theme="dark"] .job-title {
   color: #FFFFFF !important;
+}
+
+/* Dark Mode Experience Dates */
+[data-theme="dark"] .job-dates {
+  color: #94a3b8 !important;
 }
 
 /* Dark Mode Card Content */
 [data-theme="dark"] .case-study-content {
-  background: var(--bg-white);
+  background: rgba(15, 23, 42, 0.8);
 }
 
 [data-theme="dark"] .case-study-card-inner {
-  background: var(--bg-white);
+  background: transparent;
 }
 
 /* Dark Mode Button Styles */
