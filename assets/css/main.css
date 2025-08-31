@@ -191,10 +191,69 @@ a {
     grid-column: 1 / -1; /* Full width on mobile */
   }
   
+  /* Mobile carousel for case studies */
+  .grid-3 {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--space-md);
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: calc(-1 * var(--space-sm));
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  .grid-3::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .grid-3 .case-study-card {
+    flex: 0 0 calc(100vw - var(--space-sm) - 100px); /* Use most of viewport width, accounting for container margin and more peek space */
+    scroll-snap-align: start;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure consistent card heights */
+  .grid-3 .case-study-card-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid-3 .case-study-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Ensure consistent image heights in carousel */
+  .grid-3 .case-study-image {
+    height: 400px; /* Match the existing desktop height */
+    flex-shrink: 0;
+  }
+  
+    /* Disable hover transform on mobile carousel to prevent vertical scroll */
+  .grid-3 .case-study-card:hover {
+    transform: none;
+  }
+  
+  /* Reduce vertical padding from 60px to 48px on mobile */
+  .hero {
+    padding-top: calc(var(--space-xl) + 48px);
+  }
+  
+  .case-hero {
+    padding-top: calc(var(--space-3xl) + 48px);
+  }
 
   
-  .grid-2,
-  .grid-3 {
+  .grid-2 {
     gap: var(--space-lg);
   }
 }
@@ -832,7 +891,7 @@ a {
   .experience-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
     min-height: auto;
   }
   
@@ -846,7 +905,20 @@ a {
     justify-content: space-between;
   }
   
+  .company-name {
+    font-size: var(--font-body); /* Smaller on mobile */
+    font-weight: 600; /* Slightly bolder for hierarchy */
+  }
+  
+  .job-title {
+    font-size: 14px; /* Smaller secondary text */
+    font-weight: 400; /* Regular weight */
+    color: var(--secondary-color);
+  }
+  
   .job-dates {
+    font-size: 14px; /* Match job title size */
+    font-weight: 400; /* Regular weight */
     min-width: auto;
     text-align: left;
   }
@@ -1658,9 +1730,15 @@ a {
   color: #FFFFFF !important;
 }
 
-/* Dark Mode Experience Dates */
+/* Dark Mode Experience Dates and Job Titles */
 [data-theme="dark"] .job-dates {
   color: #94a3b8 !important;
+}
+
+@media (max-width: 767px) {
+  [data-theme="dark"] .job-title {
+    color: #94a3b8 !important;
+  }
 }
 
 /* Dark Mode Card Content */
