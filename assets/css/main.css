@@ -387,6 +387,10 @@ a {
   background: rgba(15, 23, 42, 0.95);
 }
 
+[data-theme="dark"] .nav-toggle-line {
+  background: #FFFFFF;
+}
+
 .nav-content {
   display: flex;
   justify-content: space-between;
@@ -481,7 +485,7 @@ a {
   
   /* Hamburger animation */
   .nav-toggle.active .nav-toggle-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(2px, 5px);
   }
   
   .nav-toggle.active .nav-toggle-line:nth-child(2) {
@@ -489,7 +493,7 @@ a {
   }
   
   .nav-toggle.active .nav-toggle-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(2px, -5px);
   }
 }
 
@@ -907,17 +911,17 @@ a {
   
   .company-name {
     font-size: var(--font-body); /* Smaller on mobile */
-    font-weight: 600; /* Slightly bolder for hierarchy */
+    font-weight: 400; /* Slightly bolder for hierarchy */
   }
   
   .job-title {
-    font-size: 14px; /* Smaller secondary text */
+    font-size: 16px; /* Smaller secondary text */
     font-weight: 400; /* Regular weight */
     color: var(--secondary-color);
   }
   
   .job-dates {
-    font-size: 14px; /* Match job title size */
+    font-size: 16px; /* Match job title size */
     font-weight: 400; /* Regular weight */
     min-width: auto;
     text-align: left;
