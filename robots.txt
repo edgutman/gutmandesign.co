@@ -3,6 +3,9 @@ User-agent: *
 # Disallow password-protected content
 Disallow: /password.html
 
+# Disallow all case studies
+Disallow: /case-study-*.html
+
 # Disallow all assets (images, files, fonts, etc.)
 Disallow: /assets/
 
